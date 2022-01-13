@@ -1,0 +1,45 @@
+body {
+     background-image: linear-gradient(30deg, #E84545 10%, #2B2E4A 10%);
+     min-height: 754px;
+     text-align: center;
+}
+
+h1 {
+     display: inline-block;
+     color: #00ADB5;
+     margin-top: 50px;
+     font-family: "Praise", cursive;
+     font-size: 7rem;
+     text-shadow: 4px 4px 1px #222831;
+     cursor: default;
+     transition-duration: 0.125s;
+
+}
+
+h1:hover {
+     transform:scale(1.035);
+}
+
+table div {
+     width: 150px;
+     height: 150px;
+}
+
+table {
+     margin: 20px auto;
+}
+
+.mid-row {
+     border: 6px #00ADB5;
+     border-style: solid none;
+}
+
+.mid-col {
+     border: 6px #00ADB5;
+     border-style: none solid;
+}
+
+img {
+     width: 55%;
+     margin-top: 40px;
+}

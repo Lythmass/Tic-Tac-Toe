@@ -3,7 +3,6 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
@@ -13,11 +12,6 @@ app.set("view engine", "ejs");
 
 app.get("/", function(req, res) {
      res.render("game", {TicTacToe: "Tic-Tac-Toe"});
-});
-
-
-app.post("/", function(req, res) {
-     res.render("game", {TicTacToe: "game over"});
 });
 
 

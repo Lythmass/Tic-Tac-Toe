@@ -13,8 +13,9 @@ h1 {
      text-shadow: 4px 4px 1px #222831;
      cursor: default;
      transition-duration: 0.125s;
-
+     position: relative;
 }
+
 
 h1:hover {
      transform:scale(1.035);

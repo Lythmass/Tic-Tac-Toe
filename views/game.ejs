@@ -66,9 +66,9 @@
                     $("#" + i).html("<img src = ''>");
                     moves = 0; x = true; placed.length = 0;
                     $("h1").text("Tic-Tac-Toe");
-                    $(".Play").text("Restart");
                }
                isPlaying = true;
+               $(this).hide(200);
           });
 
           //Placing X and O
@@ -94,12 +94,15 @@
                          if (winner() != undefined) {
                               if (winner() != "Draw") {
                                    $("h1").text("Winner is " + winner());
+                                   $(".Play").text("Restart");
+                                   $(".Play").show(200);
                               } else {
                                    $("h1").text("It's a " + winner());
+                                   $(".Play").text("Restart");
+                                   $(".Play").show(200);
                               }
                          }
                     }
-                    console.log(isPlaying);
                }
           });
 

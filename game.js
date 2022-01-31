@@ -17,6 +17,7 @@ $(".Play").on("click", function() {
           $("#" + i).html("<img src = ''>");
           moves = 0; x = true; placed.length = 0;
           $("h1").text("Tic-Tac-Toe");
+          $(".lines").hide();
      }
      isPlaying = true;
      $(this).hide(200);
@@ -87,30 +88,59 @@ $("td div").on("click", function() {
 //Determine the Winner
 function winner() {
      let winner = "Draw";
-     //Check the winner from the middle square
-     for (var i = 0; i < 4; i++) {
-          if (placed[i + 1] == placed[5] && placed[5] == placed[9 - i] && placed[5] != null) {
-               winner = placed[5];
-               isPlaying = false;
-               return winner;
-          }
+
+     //Check the winner diagonally
+     if(placed[5] == placed[1] && placed[5] == placed[9] && placed[5] != null) {
+          winner = placed[5];
+          isPlaying = false;
+          $(".line-7").show(200);
+          return winner;
      }
-     //Check the winner from side squares
-     for (var i = 1; i <= 4; i++) {
-          let sideMid = Math.ceil(i * 2);
-          if (Math.ceil(sideMid / 3) == 2) {
-               if (placed[sideMid] != null && placed[sideMid] == placed[sideMid - 3] && placed[sideMid] == placed[sideMid + 3]) {
-                    winner = placed[sideMid];
-                    isPlaying = false;
-                    return winner;
-               }
-          } else {
-               if (placed[sideMid] != null && placed[sideMid] == placed[sideMid - 1] && placed[sideMid] == placed[sideMid + 1]) {
-                    winner = placed[sideMid];
-                    isPlaying = false;
-                    return winner;
-               }
-          }
+     if(placed[5] == placed[3] && placed[5] == placed[7] && placed[5] != null) {
+          winner = placed[5];
+          isPlaying = false;
+          $(".line-8").show(200);
+          return winner;
+     }
+
+     //Check the winner from vertically
+     if(placed[1] == placed[4] && placed[4] == placed[7] && placed[4] != null) {
+          winner = placed[4];
+          isPlaying = false;
+          $(".line-4").animate({height: "show"}, 200);
+          return winner;
+     }
+     if(placed[2] == placed[5] && placed[5] == placed[8] && placed[5] != null) {
+          winner = placed[5];
+          isPlaying = false;
+          $(".line-5").animate({height: "show"}, 200);
+          return winner;
+     }
+     if(placed[3] == placed[6] && placed[6] == placed[9] && placed[6] != null) {
+          winner = placed[6];
+          isPlaying = false;
+          $(".line-6").animate({height: "show"}, 200);
+          return winner;
+     }
+
+     //Check the winner horizontally
+     if(placed[1] == placed[2] && placed[2] == placed[3] && placed[2] != null) {
+          winner = placed[2];
+          isPlaying = false;
+          $(".line-2").animate({width: "show"}, 200);
+          return winner;
+     }
+     if(placed[4] == placed[5] && placed[5] == placed[6] && placed[5] != null) {
+          winner = placed[5];
+          isPlaying = false;
+          $(".line-1").animate({width: "show"}, 200);
+          return winner;
+     }
+     if(placed[7] == placed[8] && placed[8] == placed[9] && placed[8] != null) {
+          winner = placed[8];
+          isPlaying = false;
+          $(".line-3").animate({width: "show"}, 200);
+          return winner;
      }
 
      if (winner == "Draw") {

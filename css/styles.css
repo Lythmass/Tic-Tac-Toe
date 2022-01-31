@@ -27,6 +27,67 @@ h3 {
      color: #00ADB5;
 }
 
+
+/* Crossing Lines */
+.lines {
+     background-color: #00ADB5;
+     width: 32%;
+     height: 5px;
+     position: absolute;
+     border-radius: 10px;
+     display: none;
+}
+
+.line-1 {
+     top: 59%;
+     left: 34%;
+}
+
+.line-2 {
+     top: 38%;
+     left: 34%;
+}
+
+.line-3 {
+     top: 79%;
+     left: 34%;
+}
+
+.line-4 {
+     top: 59%;
+     left: 23.5%;
+     transform: rotateZ(90deg);
+     
+}
+
+.line-5 {
+     top: 59%;
+     left: 34%;
+     transform: rotateZ(90deg);
+}
+
+.line-6 {
+     top: 59%;
+     left: 44.5%;
+     transform: rotateZ(90deg);
+}
+
+.line-7 {
+     top: 59%;
+     left: 29.3%;
+     transform: rotateZ(45deg);
+     width: 42%;
+}
+
+.line-8 {
+     top: 59%;
+     left: 29.3%;
+     transform: rotateZ(-45deg);
+     width: 42%;
+}
+
+/* End of crossing lines */
+
 .title {
      color: #E84545;
      position: absolute;
@@ -87,6 +148,8 @@ img {
      margin-top: 40px;
 }
 
+
+/* Play Button */
 .Play {
      position: relative;
      cursor: pointer;

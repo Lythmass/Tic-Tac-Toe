@@ -1,0 +1,187 @@
+body {
+     background-image: linear-gradient(30deg, #E84545 10%, #2B2E4A 10%);
+     min-height: 754px;
+     text-align: center;
+     font-family: 'Montserrat', sans-serif;
+     height: 100vh;
+}
+
+
+/* Tic-Tac-Toe Title Styles*/
+h1 {
+     display: inline-block;
+     color: #00ADB5;
+     margin-top: 50px;
+     font-family: "Praise", cursive;
+     font-size: 7rem;
+     text-shadow: 4px 4px 1px #222831;
+     cursor: default;
+     transition-duration: 0.125s;
+     position: relative;
+}
+
+h1:hover {
+     transform:scale(1.035);
+}
+
+/* Start of Scoreboard Styles*/
+h3 {
+     display: inline-block;
+     color: #00ADB5;
+}
+
+/* Scoreboard Title Styles*/
+.title {
+     color: #E84545;
+     position: absolute;
+     cursor: default;
+     right: 10%;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+     top: 30.5%;
+     background-color: #202133;
+     width: 17%;
+     margin: 0;
+}
+
+/* Box of the Scoreboard Styles*/
+.container {
+     margin: 0;
+     position: absolute;
+     cursor: default;
+     right: 10%;
+     width: 17%;
+     top: 35%;
+     background-color: #202133;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+     overflow-y: auto;
+}
+
+.sumX, .sumO {
+     color: #E84545;
+}
+/*End of Scoreboard Styles*/
+
+/*Creating Tic-Tac-Toe Grid Styles*/
+table div {
+     width: 150px;
+     height: 150px;
+}
+
+table {
+     margin: 17px auto;
+}
+
+.mid-row {
+     border: 6px #00ADB5;
+     border-style: solid none;
+}
+
+.mid-col {
+     border: 6px #00ADB5;
+     border-style: none solid;
+}
+
+img {
+     width: 55%;
+     margin-top: 40px;
+}
+/* End of Tic-Tac Toe Grid Styles */
+
+/* Play Button Styles*/
+.Play {
+     position: relative;
+     cursor: pointer;
+     background-color: #E84545;
+     display: inline-block;
+     padding: 0 75px;
+     font-size: 2rem;
+     color: #2B2E4A;
+     border-radius: 15px;
+     overflow: hidden;
+     z-index: 1;
+}
+
+.Play::before {
+     content: "";
+     z-index: -1;
+     position: absolute;
+     left: -100%; top: 0;
+     background-color: #00ADB5;
+     width: 100%; height: 100%;
+     transition: all 0.25s ease;
+}
+
+.Play:hover::before {
+     left: 0;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #e84545 #202133;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #202133;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #e84545;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+  }
+
+
+@media (max-width: 1200px) {
+       .container, .title {
+            right: 5%;
+       }
+       .container {
+            top: 55%;
+       }
+       .title {
+            top: 50.5%;
+       }
+}
+
+@media (max-width: 980px) {
+        .container, .title {
+             right: 2.5%;
+             width: 20%;
+        }
+        .container {
+             top: 50%;
+
+        }
+        .title {
+             top: 45.5%;
+        }
+
+        table div {
+             width: 100px;
+             height: 100px;
+        }
+}
+
+@media (max-width: 915px) {
+        .container {
+             top: 45%;
+        }
+        .title {
+             top: 40.7%;
+        }
+
+        table div {
+             width: 100px;
+             height: 100px;
+        }
+}

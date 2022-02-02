@@ -3,8 +3,11 @@ body {
      min-height: 754px;
      text-align: center;
      font-family: 'Montserrat', sans-serif;
+     height: 100vh;
 }
 
+
+/* Tic-Tac-Toe Title Styles*/
 h1 {
      display: inline-block;
      color: #00ADB5;
@@ -17,99 +20,33 @@ h1 {
      position: relative;
 }
 
-
 h1:hover {
      transform:scale(1.035);
 }
 
+/* Start of Scoreboard Styles*/
 h3 {
      display: inline-block;
      color: #00ADB5;
 }
 
-
-/* Crossing Lines */
-.lines {
-     background-color: #00ADB5;
-     width: 32%;
-     height: 5px;
-     position: absolute;
-     border-radius: 10px;
-     display: none;
-}
-
-.line-1 {
-     top: 59%;
-     left: 34%;
-}
-
-.line-2 {
-     top: 38%;
-     left: 34%;
-}
-
-.line-3 {
-     top: 79%;
-     left: 34%;
-}
-
-.line-4 {
-     top: 59%;
-     left: 23.5%;
-     transform: rotateZ(90deg);
-     
-}
-
-.line-5 {
-     top: 59%;
-     left: 34%;
-     transform: rotateZ(90deg);
-}
-
-.line-6 {
-     top: 59%;
-     left: 44.5%;
-     transform: rotateZ(90deg);
-}
-
-.line-7 {
-     top: 59%;
-     left: 29.3%;
-     transform: rotateZ(45deg);
-     width: 42%;
-}
-
-.line-8 {
-     top: 59%;
-     left: 29.3%;
-     transform: rotateZ(-45deg);
-     width: 42%;
-}
-
-/* End of crossing lines */
-
+/* Scoreboard Title Styles*/
 .title {
      color: #E84545;
      position: absolute;
-     display: inline-block;
-     right: 9.2%;
+     cursor: default;
+     right: 10%;
      border-top-left-radius: 10px;
      border-top-right-radius: 10px;
      top: 30.5%;
      background-color: #202133;
      width: 17%;
+     margin: 0;
 }
 
-table div {
-     width: 150px;
-     height: 150px;
-}
-
-table {
-     margin: 17px auto;
-}
-
+/* Box of the Scoreboard Styles*/
 .container {
+     margin: 0;
      position: absolute;
      cursor: default;
      right: 10%;
@@ -121,16 +58,19 @@ table {
      overflow-y: auto;
 }
 
-/* .sum {
-     position: absolute;
-     cursor: default;
-     right: 10%;
-     width: 17%;
-     height:
-} */
-
 .sumX, .sumO {
      color: #E84545;
+}
+/*End of Scoreboard Styles*/
+
+/*Creating Tic-Tac-Toe Grid Styles*/
+table div {
+     width: 150px;
+     height: 150px;
+}
+
+table {
+     margin: 17px auto;
 }
 
 .mid-row {
@@ -147,9 +87,9 @@ img {
      width: 55%;
      margin-top: 40px;
 }
+/* End of Tic-Tac Toe Grid Styles */
 
-
-/* Play Button */
+/* Play Button Styles*/
 .Play {
      position: relative;
      cursor: pointer;
@@ -177,6 +117,7 @@ img {
      left: 0;
 }
 
+
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
@@ -198,3 +139,49 @@ img {
     border-radius: 10px;
     border: 0px solid #ffffff;
   }
+
+
+@media (max-width: 1200px) {
+       .container, .title {
+            right: 5%;
+       }
+       .container {
+            top: 55%;
+       }
+       .title {
+            top: 50.5%;
+       }
+}
+
+@media (max-width: 980px) {
+        .container, .title {
+             right: 2.5%;
+             width: 20%;
+        }
+        .container {
+             top: 50%;
+
+        }
+        .title {
+             top: 45.5%;
+        }
+
+        table div {
+             width: 100px;
+             height: 100px;
+        }
+}
+
+@media (max-width: 915px) {
+        .container {
+             top: 45%;
+        }
+        .title {
+             top: 40.7%;
+        }
+
+        table div {
+             width: 100px;
+             height: 100px;
+        }
+}
